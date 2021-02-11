@@ -23,3 +23,32 @@
   content: "|";
   padding-right: 0.3em;
 }
+
+#upBlock{
+  background-color: blue;
+  text-align: center;
+  justify-content: space-around;
+  display: flex;
+  grid-area: header;
+}
+
+.upButton{
+  width: 20vw;
+  height: 100%;
+}
+
+.button{
+  border: none;
+  font-family: Arial;
+  font-size: 1.7vw;
+  background-color: #1c87c9;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px;
+}
+
+.button:hover{
+  cursor: pointer;
+}
