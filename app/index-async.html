@@ -30,9 +30,12 @@
     $script([
       'lib/angular/angular.js',
       'lib/angular-route/angular-route.js',
+      'lib/angular-animate/angular-animate.js',
       'app.js',
       'view1/view1.js',
       'view2/view2.js',
+      'aubourg/cv/cv.js',
+      'aubourg/presentation.presentation.js',
       'core/version/version.js',
       'core/version/version-directive.js',
       'core/version/interpolate-filter.js'
@@ -44,16 +47,20 @@
   <title>My AngularJS App</title>
   <link rel="stylesheet" href="app.css">
 </head>
-<body ng-cloak>
-<div id="upBlock">
-    <a href="#!/view1" class="button upButton" type="button">Cyril Aubourg</a>
-    <a href="#!/view2" class="button upButton" type="button">Gaizka Valle Zabala</a>
-    <a href="#!/view1" class="button upButton" type="button">Iker Sacristán Ortiz</a>
-</div>
-
-  <div ng-view></div>
-
-  <div>AngularJS seed app: v<span app-version></span></div>
+<body ng-cloak ng-controller="menuCtrl">
+<ul id="upBlock" class="block">
+    <li class="button upButton" type="button" ng-repeat="student in students">
+        <p class="text" ng-mouseover="student.setMenu(true)" ng-mouseleave="student.setMenu(false)">{{ student.fullname() }}</p>
+        <ul id="under3" ng-show="student.getMenu()" ng-mouseover="student.setMenu(true)" ng-mouseleave="student.setMenu(false)">
+            <li>
+                <a href="#!/{{ student.getCard() }}" class="button upButton menuButton text" type="button">Carta de presentacion</a>
+            </li>
+            <li>
+                <a href="#!/{{ student.getCV() }}" class="button upButton menuButton text" type="button">CV</a>
+            </li>
+        </ul>
+    </li>
+</ul>
 
 </body>
 </html>

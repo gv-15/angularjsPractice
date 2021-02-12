@@ -18,12 +18,20 @@
     <link rel="stylesheet" href="app.css">
     <script src="lib/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
-<body>
-<div id="upBlock">
-    <a href="#!/view1" class="button upButton" type="button">Cyril Aubourg</a>
-    <a href="#!/view2" class="button upButton" type="button">Gaizka Valle Zabala</a>
-    <a href="#!/view1" class="button upButton" type="button">Iker Sacristán Ortiz</a>
-</div>
+<body ng-controller="menuCtrl">
+<ul id="upBlock" class="block">
+    <li class="button upButton" type="button" ng-repeat="student in students">
+        <p class="text" ng-mouseover="student.setMenu(true)" ng-mouseleave="student.setMenu(false)">{{ student.fullname() }}</p>
+        <ul id="under3" ng-show="student.getMenu()" ng-mouseover="student.setMenu(true)" ng-mouseleave="student.setMenu(false)">
+            <li>
+                <a href="#!/{{ student.getCard() }}" class="button upButton menuButton text" type="button">Carta de presentacion</a>
+            </li>
+            <li>
+                <a href="#!/{{ student.getCV() }}" class="button upButton menuButton text" type="button">CV</a>
+            </li>
+        </ul>
+    </li>
+</ul>
 
 <!--[if lt IE 7]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
@@ -39,9 +47,12 @@
 -->
 <script src="lib/angular/angular.js"></script>
 <script src="lib/angular-route/angular-route.js"></script>
+<script src="lib/angular-animate/angular-animate.js"></script>
 <script src="app.js"></script>
 <script src="view1/view1.js"></script>
 <script src="view2/view2.js"></script>
+<script src="aubourg/cv/cv.js"></script>
+<script src="aubourg/presentation/presentation.js"></script>
 <script src="core/version/version.js"></script>
 <script src="core/version/version-directive.js"></script>
 <script src="core/version/interpolate-filter.js"></script>
