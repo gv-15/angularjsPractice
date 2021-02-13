@@ -18,8 +18,8 @@ var app = angular.module('myApp', [
 app.controller('menuCtrl', function($scope) {
     $scope.students = [
         new Student("Cyril", "Aubourg", "view1", "view2"),
-        new Student("Gaizka", "Valle Zabala", "", ""),
-        new Student("Iker", "Sacristán Ortiz", "", ""),
+        new Student("Gaizka", "Valle Zabala", "view1", "view2"),
+        new Student("Iker", "Sacristán Ortiz", "view1", "view2"),
     ];
 });
 
