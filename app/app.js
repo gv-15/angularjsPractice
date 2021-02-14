@@ -5,6 +5,8 @@ var app = angular.module('myApp', [
     'ngRoute',
     'myApp.aubourg.cv',
     'myApp.aubourg.presentation',
+    'myApp.valle.cv',
+    'myApp.valle.presentation',
     'myApp.view1',
     'myApp.view2',
     'myApp.version',
@@ -18,8 +20,8 @@ var app = angular.module('myApp', [
 app.controller('menuCtrl', function($scope) {
     $scope.students = [
         new Student("Cyril", "Aubourg", "presentation", "cv"),
-        new Student("Gaizka", "Valle Zabala", "cv", "cv"),
-        new Student("Iker", "Sacristán Ortiz", "view1", "view2"),
+        new Student("Gaizka", "Valle", "presentation", "cv"),
+        new Student("Iker", "Sacristán", "presentation", "cv"),
     ];
 });
 

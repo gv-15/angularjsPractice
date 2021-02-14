@@ -1,6 +1,14 @@
 {
     "elements": {
-        "div": {}
+        "div": {},
+        "p": {}
     },
-    "attributes": {}
+    "attributes": {
+        "alling": {
+            "context": "p"
+        },
+        "app-version": {
+            "context": "span"
+        }
+    }
 }
