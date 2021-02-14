@@ -17,7 +17,7 @@ var app = angular.module('myApp', [
 
 app.controller('menuCtrl', function($scope) {
     $scope.students = [
-        new Student("Cyril", "Aubourg", "view1", "view2"),
+        new Student("Cyril", "Aubourg", "presentation", "cv"),
         new Student("Gaizka", "Valle Zabala", "cv", "cv"),
         new Student("Iker", "Sacristán Ortiz", "view1", "view2"),
     ];
@@ -38,11 +38,11 @@ class Student {
     }
 
     getCard() {
-        return this.card;
+        return this.surname.toLowerCase() + "/" + this.card;
     }
 
     getCV() {
-        return this.cv;
+        return this.surname.toLowerCase() + "/" + this.cv;
     }
 
     getMenu() {

@@ -16,18 +16,19 @@
     <link rel="stylesheet" href="lib/html5-boilerplate/dist/css/normalize.css">
     <link rel="stylesheet" href="lib/html5-boilerplate/dist/css/main.css">
     <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="aubourg/cv/cv.css">
     <script src="lib/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body ng-controller="menuCtrl">
-<ul id="upBlock" class="block">
-    <li class="button upButton" type="button" ng-repeat="student in students">
+<ul id="upBlock" class="block ulMenu">
+    <li class="button upButton liMenu" ng-repeat="student in students">
         <p class="text" ng-mouseover="student.setMenu(true)" ng-mouseleave="student.setMenu(false)">{{ student.fullname() }}</p>
         <ul id="under3" ng-show="student.getMenu()" ng-mouseover="student.setMenu(true)" ng-mouseleave="student.setMenu(false)">
             <li>
-                <a href="#!/{{ student.getCard() }}" class="button upButton menuButton text" type="button">Carta de presentacion</a>
+                <a href="#!/{{ student.getCard() }}" class="button upButton menuButton text">Carta de presentacion</a>
             </li>
             <li>
-                <a href="#!/{{ student.getCV() }}" class="button upButton menuButton text" type="button">CV</a>
+                <a href="#!/{{ student.getCV() }}" class="button upButton menuButton text">CV</a>
             </li>
         </ul>
     </li>
