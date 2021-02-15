@@ -6,6 +6,9 @@ table {
 .cv {
     background-color: lightsteelblue;
     margin-top: 10px;
+}
+
+.cvGrid {
     display: grid;
     grid-template-areas:
             'coord work work work'
