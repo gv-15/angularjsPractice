@@ -6,6 +6,11 @@ table {
 .cv {
     background-color: lightsteelblue;
     margin-top: 10px;
+    display: grid;
+    grid-template-areas:
+            'coord work work work'
+            'skills work work work'
+            'skills social social social';
 }
 
 .title {
@@ -26,7 +31,7 @@ table {
     padding: 10px;
     font-weight: bold;
     font-style: italic;
-    width: 10%;
+    width: 15%;
 }
 
 .info {
@@ -37,4 +42,30 @@ table {
 .important {
     font-weight: bold;
     font-style: italic;
+}
+
+.education {
+    grid-area: education;
+}
+
+.coord {
+    background-color: rgb(255,255,255);
+    border: black solid;
+    grid-area: coord;
+}
+
+.work {
+    grid-area: work;
+}
+
+.skills {
+    grid-area: skills;
+    background-color: rgb(255,255,255);
+    border-right: black solid;
+    border-left: black solid;
+    border-bottom: black solid;
+}
+
+.social {
+    grid-area: social;
 }
