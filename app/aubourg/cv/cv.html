@@ -48,8 +48,8 @@
                 <tr>
                     <td class="date">2020<br>(5 months)</td>
                     <td class="info"><img src="aubourg/cv/images/withings.png" alt="" width=250" height="60">
-                        <p class="important">Internship</p>
-                        <ul>Automation of security tests:
+                        <p class="important">Internship<input id="wtg" type="button" class="button addButton" onclick="showContent('withings', this.id)" value="+"></p>
+                        <ul id="withings" class="hide">Automation of security tests:
                             <ul>
                                 <li>
                                     Created new security tests for WITHINGS API (PHP)
@@ -71,10 +71,10 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="date">2019 - 2020<br>(6 months)</td>
-                    <td class="info"><img src="aubourg/cv/images/nokia.png" alt="" width=250" height="40">
-                        <p class="important">Internship</p>
-                        <ul>Created of a virtual environment for 5G test automation:
+                    <td class="date td">2019 - 2020<br>(6 months)</td>
+                    <td class="info td"><img src="aubourg/cv/images/nokia.png" alt="" width=250" height="40">
+                        <p class="important">Internship<input id="nok" type="button" class="button addButton" onclick="showContent('nokia', this.id)" value="+"></p>
+                        <ul id="nokia" class="hide">Created of a virtual environment for 5G test automation:
                             <ul>
                                 <li>
                                     Managed of virtual machines networks simulating 5G equipment (OpenStack)
@@ -93,9 +93,9 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="date">2018 - 2019<br>(10 months)</td>
-                    <td class="info"><p class="important">Home Automation Project:</p>
-                        <ul>Created a complete home automation system in a team of 6 people:
+                    <td class="date td">2018 - 2019<br>(10 months)</td>
+                    <td class="info td"><p class="important">Home Automation Project:<input id="hap" type="button" class="button addButton" onclick="showContent('home_project', this.id)" value="+"></p>
+                        <ul id="home_project" class="hide">Created a complete home automation system in a team of 6 people:
                             <ul>
                                 <li>
                                     Created a sound capture system
@@ -117,6 +117,21 @@
     <div class="skills">
         <h1>Skills</h1>
         <table>
+            <tr>
+                <td class="info"><p class="important">Languages:</p>
+                    <ul>
+                        <li>
+                            French (mother tongue)
+                        </li>
+                        <li>
+                            English (fluent – TOEIC 2019: 830/990)
+                        </li>
+                        <li>
+                            Spanish (working knowledge)
+                        </li>
+                    </ul>
+                </td>
+            </tr>
             <tr>
                 <td class="info"><p class="important">Computer Languages:</p>
                     <table>
@@ -146,21 +161,6 @@
                             </td>
                         </tr>
                     </table>
-                </td>
-            </tr>
-            <tr>
-                <td class="info"><p class="important">Languages:</p>
-                    <ul>
-                        <li>
-                            French (Mother Tongue)
-                        </li>
-                        <li>
-                            English (fluent – TOEIC 2019: 830/990)
-                        </li>
-                        <li>
-                            Spanish (working knowledge)
-                        </li>
-                    </ul>
                 </td>
             </tr>
             <tr>

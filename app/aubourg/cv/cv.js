@@ -12,3 +12,17 @@ angular.module('myApp.aubourg.cv', ['ngRoute'])
 .controller('cvCtrl', [function() {
 
 }]);
+
+function showContent(elementName, id) {
+    document.getElementById(elementName).classList.remove("hide");
+    document.getElementById(id).value = "-";
+    document.getElementById(id).onclick = function() { hideContent(elementName, id); };
+    return;
+}
+
+function hideContent(elementName, id) {
+    document.getElementById(elementName).classList.add("hide");
+    document.getElementById(id).value = "+";
+    document.getElementById(id).onclick = function() { showContent(elementName, id); };
+    return;
+}

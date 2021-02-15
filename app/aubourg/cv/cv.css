@@ -1,5 +1,5 @@
 table {
-    width:100%;
+    width: 100%;
     border-collapse: collapse;
 }
 
@@ -10,10 +10,7 @@ table {
 
 .cvGrid {
     display: grid;
-    grid-template-areas:
-            'coord work work work'
-            'skills work work work'
-            'skills social social social';
+    grid-template-areas: 'coord work work work' 'skills work work work' 'skills social social social';
 }
 
 .title {
@@ -52,7 +49,7 @@ table {
 }
 
 .coord {
-    background-color: rgb(255,255,255);
+    background-color: rgb(255, 255, 255);
     border: black solid;
     grid-area: coord;
 }
@@ -63,7 +60,7 @@ table {
 
 .skills {
     grid-area: skills;
-    background-color: rgb(255,255,255);
+    background-color: rgb(255, 255, 255);
     border-right: black solid;
     border-left: black solid;
     border-bottom: black solid;
@@ -71,4 +68,30 @@ table {
 
 .social {
     grid-area: social;
+}
+
+.hide {
+    display: none;
+}
+
+.addButton {
+    border: none;
+    background-color: white;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    padding: 0;
+    margin: 0 0 0 5px;
+    text-align: center;
+    color: #000000;
+    border-radius: 60px;
+}
+
+.addButton:hover {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+.td {
+    padding-top: 50px;
 }
