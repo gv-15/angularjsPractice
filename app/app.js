@@ -7,6 +7,8 @@ var app = angular.module('myApp', [
     'myApp.aubourg.presentation',
     'myApp.valle.cv',
     'myApp.valle.presentation',
+    'myApp.sacristan.cv',
+    'myApp.sacristan.presentation',
     'myApp.view1',
     'myApp.view2',
     'myApp.version',

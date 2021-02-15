@@ -1,7 +1,8 @@
 {
     "elements": {
         "div": {},
-        "p": {}
+        "p": {},
+        "br": {}
     },
     "attributes": {
         "alling": {
