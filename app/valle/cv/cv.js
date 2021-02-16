@@ -12,3 +12,4 @@ angular.module('myApp.valle.cv', ['ngRoute'])
 .controller('cvCtrl', [function() {
 
 }]);
+

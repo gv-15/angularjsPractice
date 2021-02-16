@@ -8,6 +8,13 @@ table {
     margin-top: 10px;
 }
 
+.coord {
+    background-color: rgb(255, 255, 255);
+    border: black solid;
+    width: 99.7%;
+    text-align: center;
+}
+
 .title {
     margin: 0;
     background-color: #1c94c4;
