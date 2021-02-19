@@ -10,25 +10,26 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>My AngularJS App</title>
+    <title>Demo AngularJS</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="lib/html5-boilerplate/dist/css/normalize.css">
     <link rel="stylesheet" href="lib/html5-boilerplate/dist/css/main.css">
     <link rel="stylesheet" href="app.css">
     <link rel="stylesheet" href="aubourg/cv/cv.css">
+    <link rel="stylesheet" href="aubourg/presentation/presentation.css">
     <script src="lib/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body ng-controller="menuCtrl">
 <ul id="upBlock" class="block ulMenu">
     <li class="button upButton liMenu" ng-repeat="student in students">
-        <p class="text" ng-mouseover="student.setMenu(true)" ng-mouseleave="student.setMenu(false)">{{ student.fullname() }}</p>
+        <p class="myText" ng-mouseover="student.setMenu(true)" ng-mouseleave="student.setMenu(false)">{{ student.fullname() }}</p>
         <ul id="under3" class="ulMenu" ng-show="student.getMenu()" ng-mouseover="student.setMenu(true)" ng-mouseleave="student.setMenu(false)">
             <li class="liMenu">
-                <a href="#!/{{ student.getCard() }}" class="button upButton menuButton text">Carta de presentacion</a>
+                <a href="#!/{{ student.getCard() }}" class="button upButton menuButton myText">Carta de presentacion</a>
             </li>
             <li class="liMenu">
-                <a href="#!/{{ student.getCV() }}" class="button upButton menuButton text">CV</a>
+                <a href="#!/{{ student.getCV() }}" class="button upButton menuButton myText">CV</a>
             </li>
         </ul>
     </li>
@@ -49,15 +50,11 @@
 <script src="lib/angular-animate/angular-animate.js"></script>
 <script src="app.js"></script>
 <script src="view1/view1.js"></script>
-<script src="view2/view2.js"></script>
 <script src="aubourg/cv/cv.js"></script>
 <script src="aubourg/presentation/presentation.js"></script>
 <script src="valle/cv/cv.js"></script>
 <script src="valle/presentation/presentation.js"></script>
 <script src="sacristan/cv/cv.js"></script>
 <script src="sacristan/presentation/presentation.js"></script>
-<script src="core/version/version.js"></script>
-<script src="core/version/version-directive.js"></script>
-<script src="core/version/interpolate-filter.js"></script>
 </body>
 </html>

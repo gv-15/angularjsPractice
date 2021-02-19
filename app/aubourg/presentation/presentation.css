@@ -1,0 +1,33 @@
+.presGrid {
+    display: grid;
+    grid-template-areas: 'crd crd blnk blnk' 'blk blk toL toL' 'lettr lettr lettr lettr';
+    margin: 50px;
+}
+
+.crd {
+    grid-area: crd;
+}
+
+.toL {
+    grid-area: toL;
+    text-align: right;
+}
+
+.blank {
+    grid-area: blnk;
+}
+
+.blk {
+    grid-area: blk;
+}
+
+.lettr {
+    grid-area: lettr;
+    text-align: justify;
+    justify-content: center;
+}
+
+.text {
+    margin-left: 5px;
+    width: 80%;
+}

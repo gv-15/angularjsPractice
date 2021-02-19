@@ -44,10 +44,6 @@ table {
     font-style: italic;
 }
 
-.education {
-    grid-area: education;
-}
-
 .coord {
     background-color: rgb(255, 255, 255);
     border: black solid;
