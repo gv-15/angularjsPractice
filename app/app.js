@@ -9,6 +9,7 @@ var app = angular.module('myApp', [
     'myApp.valle.presentation',
     'myApp.sacristan.cv',
     'myApp.sacristan.presentation',
+    'myApp.contact',
     'ngAnimate'
 ]).config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
     $locationProvider.hashPrefix('!');
