@@ -13,13 +13,30 @@
     <title>Demo AngularJS</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="lib/html5-boilerplate/dist/css/normalize.css">
-    <link rel="stylesheet" href="lib/html5-boilerplate/dist/css/main.css">
+    <!-- STYLE -->
     <link rel="stylesheet" href="app.css">
     <link rel="stylesheet" href="contact/contact.css">
+    <link rel="stylesheet" href="todo/todo.css">
     <link rel="stylesheet" href="aubourg/cv/cv.css">
     <link rel="stylesheet" href="aubourg/presentation/presentation.css">
-    <script src="lib/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.2.1/angular-material.min.css">
+    <!-- SCRIPTS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-messages.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.2.1/angular-material.min.js"></script>
+    <script src="app.js"></script>
+    <script src="view1/view1.js"></script>
+    <script src="aubourg/cv/cv.js"></script>
+    <script src="aubourg/presentation/presentation.js"></script>
+    <script src="valle/cv/cv.js"></script>
+    <script src="valle/presentation/presentation.js"></script>
+    <script src="sacristan/cv/cv.js"></script>
+    <script src="sacristan/presentation/presentation.js"></script>
+    <script src="contact/contact.js"></script>
+    <script src="todo/todo.js"></script>
 </head>
 <body ng-controller="menuCtrl">
 <header id="head" class="hide">
@@ -38,8 +55,13 @@
         <li class="button upButton liMenu">
             <a href="#!/contact" class="button upButton myText" style="padding: initial">Contact</a>
         </li>
+        <li class="button upButton liMenu">
+            <a href="#!/todo" class="button upButton myText" style="padding: initial">TODO List</a>
+        </li>
     </ul>
 </header>
+
+<div id="view" ng-view></div>
 
 <!-- TIME ANIMATIONS -->
 <script>
@@ -48,22 +70,5 @@
     }, 200);
 </script>
 
-<div id="view" ng-view></div>
-
-<!-- In production use:
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
--->
-<script src="lib/angular/angular.js"></script>
-<script src="lib/angular-route/angular-route.js"></script>
-<script src="lib/angular-animate/angular-animate.js"></script>
-<script src="app.js"></script>
-<script src="view1/view1.js"></script>
-<script src="aubourg/cv/cv.js"></script>
-<script src="aubourg/presentation/presentation.js"></script>
-<script src="valle/cv/cv.js"></script>
-<script src="valle/presentation/presentation.js"></script>
-<script src="sacristan/cv/cv.js"></script>
-<script src="sacristan/presentation/presentation.js"></script>
-<script src="contact/contact.js"></script>
 </body>
 </html>
