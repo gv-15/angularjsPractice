@@ -21,7 +21,7 @@ app.controller('menuCtrl', function($scope) {
     $scope.students = [
         new Student("Cyril", "Aubourg", "presentation", "cv"),
         new Student("Gaizka", "Valle", "presentation", "cv"),
-        new Student("Iker", "Sacristán", "presentation", "cv"),
+        new Student("Iker", "Sacristan", "presentation", "cv"),
     ];
 });
 

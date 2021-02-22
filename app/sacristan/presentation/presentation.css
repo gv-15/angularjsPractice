@@ -1,0 +1,31 @@
+.letter{
+    
+     border-collapse: collapse;
+    border: black solid;
+    margin-top: 15px;
+    weight: 100%;
+    background-color: lightsteelblue;
+    width:99.7%;
+}
+
+.tittle{
+    
+    text-align: center;
+
+}
+
+.encabezado{
+    
+    margin-left: 5px;
+    text-align: left;
+     
+}
+
+.text{
+    
+    margin-left: 5px;
+    width:80%;
+    text-align: left;
+     
+}
+

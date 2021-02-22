@@ -1,0 +1,47 @@
+table {
+    width:100%;
+    border-collapse: collapse;
+}
+
+.cv {
+    background-color: lightsteelblue;
+    margin-top: 10px;
+}
+
+.coord {
+    background-color: rgb(255, 255, 255);
+    border: black solid;
+    width: 99.7%;
+    text-align: center;
+}
+
+.title {
+    margin: 0;
+    background-color: #1c94c4;
+    color: white;
+    border-bottom: solid black;
+    border-top: solid black;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.date {
+    vertical-align: top;
+    text-align: center;
+    border-right: solid black;
+    padding: 10px;
+    font-weight: bold;
+    font-style: italic;
+    width: 10%;
+}
+
+.info {
+    padding: 10px;
+    vertical-align: top;
+}
+
+.important {
+    font-weight: bold;
+    font-style: italic;
+}
