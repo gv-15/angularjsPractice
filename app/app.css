@@ -121,3 +121,30 @@ ul.ulMenu {
         opacity: 0;
     }
 }
+
+@keyframes slideInTop {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+header {
+    animation: 1s ease-out 0s 1 slideInTop;
+}
+
+.hide {
+    display: none;
+}
+
+#view.ng-leave {
+    -webkit-animation: 0.3s disappear ease;
+    animation: 0.3s disappear ease;
+}
+
+#view.ng-enter {
+    -webkit-animation: 1.3s appear ease;
+    animation: 1.3s appear ease;
+}

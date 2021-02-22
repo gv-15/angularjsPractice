@@ -22,29 +22,33 @@
     <script src="lib/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body ng-controller="menuCtrl">
-<ul id="upBlock" class="block ulMenu">
-    <li class="button upButton liMenu" ng-repeat="student in students">
-        <p class="myText" ng-mouseover="student.setMenu(true)" ng-mouseleave="student.setMenu(false)">{{ student.fullname() }}</p>
-        <ul id="under3" class="ulMenu" ng-show="student.getMenu()" ng-mouseover="student.setMenu(true)" ng-mouseleave="student.setMenu(false)">
-            <li class="liMenu">
-                <a href="#!/{{ student.getCard() }}" class="button upButton menuButton myText">Carta de presentacion</a>
-            </li>
-            <li class="liMenu">
-                <a href="#!/{{ student.getCV() }}" class="button upButton menuButton myText">CV</a>
-            </li>
-        </ul>
-    </li>
-    <li class="button upButton liMenu">
-        <a href="#!/contact" class="button upButton myText" style="padding: initial">Contact</a>
-    </li>
-</ul>
+<header id="head" class="hide">
+    <ul id="upBlock" class="block ulMenu">
+        <li class="button upButton liMenu" ng-repeat="student in students">
+            <p class="myText" ng-mouseover="student.setMenu(true)" ng-mouseleave="student.setMenu(false)">{{ student.fullname() }}</p>
+            <ul id="under3" class="ulMenu" ng-show="student.getMenu()" ng-mouseover="student.setMenu(true)" ng-mouseleave="student.setMenu(false)">
+                <li class="liMenu">
+                    <a href="#!/{{ student.getCard() }}" class="button upButton menuButton myText">Carta de presentacion</a>
+                </li>
+                <li class="liMenu">
+                    <a href="#!/{{ student.getCV() }}" class="button upButton menuButton myText">CV</a>
+                </li>
+            </ul>
+        </li>
+        <li class="button upButton liMenu">
+            <a href="#!/contact" class="button upButton myText" style="padding: initial">Contact</a>
+        </li>
+    </ul>
+</header>
 
-<!--[if lt IE 7]>
-<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
-    your browser</a> to improve your experience.</p>
-<![endif]-->
+<!-- TIME ANIMATIONS -->
+<script>
+    setTimeout(function(){
+        document.getElementById('head').classList.remove('hide');
+    }, 200);
+</script>
 
-<div ng-view></div>
+<div id="view" ng-view></div>
 
 <!-- In production use:
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
