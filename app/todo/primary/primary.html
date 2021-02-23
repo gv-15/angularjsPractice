@@ -1,0 +1,39 @@
+<header class="w3-container w3-light-grey w3-padding-16">
+    <h3>Our Duty List</h3>
+</header>
+<ul class="w3-ul">
+    <li class="w3-padding-16">
+        <table>
+            <tr>
+                <th>Task</th>
+                <th>Name</th>
+                <th>Deadline</th>
+                <th>State</th>
+                <th>Delete</th>
+            </tr>
+        </table>
+    </li>
+    <li ng-repeat="x in $ctrl.tasks" class="w3-padding-16">
+        <table>
+            <tr>
+                <td>{{x.name}}</td>
+                <td>{{x.student}}</td>
+                <td>{{x.date | date: 'yyyy-MM-dd'}}</td>
+                <td>{{x.state}}</td>
+                <td><span ng-click="$ctrl.removeItem($index)" style="cursor:pointer;" class="w3-right w3-margin-right">×</span></td>
+            </tr>
+        </table>
+    </li>
+</ul>
+<div class="w3-container w3-light-grey w3-padding-16">
+    <div class="w3-row w3-margin-top">
+        <div class="w3-col s10">
+            <input placeholder="Add duty items here" ng-model="addMe" class="w3-input w3-border w3-padding">
+        </div>
+        <div class="w3-col s2">
+            <button ng-click="$ctrl.addItem()" class="w3-btn w3-padding w3-green">Add</button>
+        </div>
+    </div>
+    <p class="w3-text-red">{{$ctrl.errortext}}</p>
+</div>
+<task-form students="$ctrl.students" on-update="$ctrl.addItem(formData)"></task-form>

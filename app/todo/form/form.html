@@ -1,0 +1,21 @@
+<div ng-cloak class="w3-card-2" style="max-width:400px;">
+    <form id="taskForm">
+        <div>
+            <label for="taskName">Task</label>
+            <input id="taskName" name="taskName" ng-model="$ctrl.formTask.name" type="text" placeholder="Your task here...">
+        </div>
+        <div>
+            <label for="student">Student</label>
+            <select id="student" name="student" ng-model="$ctrl.formTask.student">
+                <option ng-value="student.fullname()" ng-repeat="student in $ctrl.students">
+                    {{student.fullname()}}
+                </option>
+            </select>
+        </div>
+        <div>
+            <label for="date">Deadline</label>
+            <input id="date" name="date" ng-model="$ctrl.formTask.date" type="date" min="{{date | date: 'yyyy-MM-dd'}}"  max="2030-12-31" placeholder="Deadline">
+        </div>
+        <input type="button" value="Submit" ng-click="$ctrl.update()">
+    </form>
+</div>
