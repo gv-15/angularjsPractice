@@ -148,3 +148,7 @@ header {
     -webkit-animation: 1.3s appear ease;
     animation: 1.3s appear ease;
 }
+
+*, ::before, ::after {
+    box-sizing: initial;
+}
