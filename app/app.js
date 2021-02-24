@@ -11,14 +11,15 @@ var app = angular.module('myApp', [
     'myApp.sacristan.presentation',
     'myApp.contact',
     'myApp.todo',
-    'ngAnimate'
+    'myApp.view1',
+    'ngAnimate'   //load the dependencies
 ]).config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
     $locationProvider.hashPrefix('!');
 
     $routeProvider.otherwise({redirectTo: '/view1'});
 }]);
 
-app.controller('menuCtrl', function($scope) {
+app.controller('menuCtrl', function ($scope) {
     $scope.students = [
         new Student("Cyril", "Aubourg", "presentation", "cv"),
         new Student("Gaizka", "Valle", "presentation", "cv"),
@@ -27,7 +28,7 @@ app.controller('menuCtrl', function($scope) {
 });
 
 
-class Student {
+class Student {    //representation of the students
     constructor(name, surname, card, cv) {
         this.name = name;
         this.surname = surname;
@@ -52,7 +53,7 @@ class Student {
         return this.menu;
     }
 
-    setMenu(bool) {
+    setMenu(bool) {    //show the menu containing the button for the CV and the cover letter
         this.menu = bool;
     }
 }

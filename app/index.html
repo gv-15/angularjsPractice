@@ -45,7 +45,7 @@
 <body ng-controller="menuCtrl">
 <header id="head" class="hide">
     <ul id="upBlock" class="block ulMenu">
-        <li class="button upButton liMenu" ng-repeat="student in students">
+        <li class="button upButton liMenu" ng-repeat="student in students"> <!-- Load students from $scope.students in app.js and create a menu button for each one -->
             <p class="myText" ng-mouseover="student.setMenu(true)" ng-mouseleave="student.setMenu(false)">{{ student.fullname() }}</p>
             <ul id="under3" class="ulMenu" ng-show="student.getMenu()" ng-mouseover="student.setMenu(true)" ng-mouseleave="student.setMenu(false)">
                 <li class="liMenu">

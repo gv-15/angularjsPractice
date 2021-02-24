@@ -3,10 +3,11 @@
 var todo = angular.module('myApp.todo', ['ngRoute']);
 
 todo.config(['$routeProvider', function ($routeProvider) {
-        $routeProvider.when('/todo', {
-            templateUrl: 'todo/todo.html',
-            controller: 'TodoCtrl'
-        });
-    }])
+    $routeProvider.when('/todo', {
+        templateUrl: 'todo/todo.html',
+        controller: 'TodoCtrl'
+    });
+}])
 
-    .controller('TodoCtrl', function ($scope) {});
+    .controller('TodoCtrl', function ($scope) {
+    });

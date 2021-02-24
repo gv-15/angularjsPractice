@@ -14,7 +14,7 @@ function todoController($scope, $element, $attrs) {
     ];
 
     ctrl.addItem = function (formData) {
-        formData.state = "In Progress";
+        formData.state = "In Progress";  //default state
         ctrl.errortext = "";
         var exists = false;
         for (let i = 0; i < ctrl.tasks.length; i++) {
@@ -24,7 +24,7 @@ function todoController($scope, $element, $attrs) {
             }
         }
         if (exists) {
-            ctrl.errortext = "The item is already in your todo list.";
+            ctrl.errortext = "The item is already in the duty list.";
         } else {
             ctrl.editMode.push(false);
             ctrl.tasks.push(formData);
@@ -40,7 +40,7 @@ function todoController($scope, $element, $attrs) {
     ctrl.updateItem = function (x) {
         if (ctrl.editMode[x]) {
             ctrl.errortext = "";
-            ctrl.tasks[x].state = ctrl.newState;
+            ctrl.tasks[x].state = ctrl.newState;  //retrieve state from the update in the view
             ctrl.editMode[x] = false;
         } else {
             ctrl.editMode[x] = true;
@@ -63,7 +63,7 @@ function todoController($scope, $element, $attrs) {
 
 todo.component("todo", {
     bindings: {
-        students: '<'
+        students: '<'   //retrieve students from app.js ('<' to retrieve the JSON, '@' for the string version)
     },
     templateUrl: "todo/primary/primary.html",
     controller: todoController
