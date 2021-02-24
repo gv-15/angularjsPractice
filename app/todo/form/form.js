@@ -14,6 +14,7 @@ function taskFormController($scope, $element, $attrs) {
 todo.component("taskForm", {
     bindings: {
         students: '<',
+        errortext: '@',
         onUpdate: '&'
     },
     templateUrl: "todo/form/form.html",
