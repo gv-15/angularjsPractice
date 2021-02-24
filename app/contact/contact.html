@@ -1,34 +1,32 @@
-<div ng-controller="contactCtrl" class="contact">
+<div ng-controller="contactCtrl" class="contact w3-container w3-light-grey w3-card-2">
     <h1 style="text-align: left">Contact Form</h1>
     <form name="contactForm" novalidate>
-        <div class="input">
+        <div class="w3-section input">
             <label>
                 Name:
             </label>
-            <input type="text" name="name" ng-model="formData.name" placeholder="Name" ng-minlength="3" required class="textarea">
-            <div ng-messages="contactForm.name.$error" ng-show="contactForm.name.$touched && contactForm.name.$invalid">
+            <input type="text" name="name" ng-model="formData.name" placeholder="Name" ng-minlength="3" required class="w3-input w3-border w3-margin-bottom our-input">
+            <div class="w3-margin-bottom" ng-messages="contactForm.name.$error" ng-show="contactForm.name.$touched && contactForm.name.$invalid">
                 <div ng-message="required" class="error">Your name is required</div>
                 <div ng-message="minlength" class="error">Your name is too short</div>
             </div>
-        </div>
-        <div class="input">
             <label>
                 Subject:
             </label>
-            <input type="text" name="subject" ng-model="formData.subject" placeholder="Subject" required class="textarea">
-            <div ng-messages="contactForm.subject.$error" ng-show="contactForm.subject.$touched && contactForm.subject.$invalid">
+            <input type="text" name="subject" ng-model="formData.subject" placeholder="Subject" required class="w3-input w3-border w3-margin-bottom our-input">
+            <div class="w3-margin-bottom" ng-messages="contactForm.subject.$error" ng-show="contactForm.subject.$touched && contactForm.subject.$invalid">
                 <div ng-message="required" class="error">Subject is required</div>
             </div>
-        </div>
-        <div class="input textareaDiv">
             <label>
                 Object:
             </label>
-            <textarea name="main" ng-model="formData.main" placeholder="Object" required class="textarea"></textarea>
-            <div ng-messages="contactForm.main.$error" ng-show="contactForm.main.$touched && contactForm.main.$invalid">
+            <textarea name="main" ng-model="formData.main" placeholder="Object" required class="w3-input w3-border w3-margin-bottom our-input"></textarea>
+            <div class="w3-margin-bottom" ng-messages="contactForm.main.$error" ng-show="contactForm.main.$touched && contactForm.main.$invalid">
                 <div ng-message="required" class="error">Object is required</div>
             </div>
         </div>
-        <input type="submit" ng-click="sendMail()" ng-disabled="contactForm.$invalid" value="Send">
+        <div class="w3-container w3-border-top w3-padding-16 w3-light-grey our-div">
+            <input class="w3-button our-button" type="submit" ng-click="sendMail()" ng-disabled="contactForm.$invalid" value="Send">
+        </div>
     </form>
 </div>

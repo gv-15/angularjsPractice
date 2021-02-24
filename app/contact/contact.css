@@ -1,7 +1,5 @@
 .contact {
-    background-color: lightsteelblue;
-    text-align: right;
-    margin: auto;
+    margin: 40px auto auto auto;
     width: 30%;
 }
 
@@ -21,4 +19,18 @@
 .error {
     color: red;
     font-style: italic;
+}
+
+.our-input, ::before, ::after {
+    box-sizing: border-box;
+}
+
+.our-button {
+    background-color: #1c87c9;
+    color: #FFFFFF;
+}
+
+.our-div {
+    display: flex;
+    justify-content: end;
 }
