@@ -9,13 +9,21 @@
                 <th>Name</th>
                 <th>Deadline</th>
                 <th>State</th>
-                <th></th>
+                <th>Delete</th>
             </tr>
-            <tr ng-repeat="x in $ctrl.tasks">
+            <tr ng-switch="$ctrl.editMode[$index]" ng-repeat="x in $ctrl.tasks">
                 <td class="w3-padding-16">{{x.name}}</td>
                 <td class="w3-padding-16">{{x.student}}</td>
                 <td class="w3-padding-16">{{x.date | date: 'yyyy-MM-dd'}}</td>
-                <td class="w3-padding-16">{{x.state}}</td>
+                <td ng-switch-when="true" class="w3-padding-16">
+                    <select id="state" class="w3-input w3-border w3-margin-bottom our-input" ng-model="$ctrl.newState">
+                        <option ng-value="state" ng-repeat="state in $ctrl.states">
+                            {{state}}
+                        </option>
+                    </select>
+                </td>
+                <td ng-switch-default class="w3-padding-16">{{x.state}}</td>
+                <td class="w3-padding-16"><span ng-click="$ctrl.updateItem($index)" style="cursor:pointer;" class="w3-right w3-margin-right">{{$ctrl.editMode[$index] ? 'Save' : 'Edit'}}</span></td>
                 <td class="w3-padding-16"><span ng-click="$ctrl.removeItem($index)" style="cursor:pointer;" class="w3-right w3-margin-right">×</span></td>
             </tr>
         </table>
