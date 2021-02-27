@@ -4,25 +4,25 @@
             <span onclick="document.getElementById('formDiv').style.display='none'" class="w3-button w3-xlarge w3-hover-red w3-display-topright" title="Close Modal">&times;</span>
         </div>
 
-        <form id="taskForm" class="w3-container">
+        <form id="taskForm" name="taskForm" class="w3-container" novalidate>
             <div class="w3-section">
                 <label for="taskName"><b>Task</b></label>
                 <input id="taskName" class="w3-input w3-border w3-margin-bottom our-input" name="taskName" ng-model="$ctrl.formTask.name" type="text" placeholder="Your task here..." required>
                 <label for="student">Student</label>
-                <select id="student" class="w3-input w3-border w3-margin-bottom our-input" name="student" ng-model="$ctrl.formTask.student">
+                <select id="student" class="w3-input w3-border w3-margin-bottom our-input" name="student" ng-model="$ctrl.formTask.student" required>
                     <option ng-value="student.fullname()" ng-repeat="student in $ctrl.students">
                         {{student.fullname()}}
                     </option>
                 </select>
                 <label for="date">Deadline</label>
-                <input id="date" class="w3-input w3-border w3-margin-bottom our-input" name="date" ng-model="$ctrl.formTask.date" type="date" min="{{date | date: 'yyyy-MM-dd'}}"  max="2030-12-31" placeholder="Deadline">
+                <input id="date" class="w3-input w3-border w3-margin-bottom our-input" name="date" ng-model="$ctrl.formTask.date" type="date" min="{{date | date: 'yyyy-MM-dd'}}"  max="2030-12-31" placeholder="Deadline" required>
                 <p class="w3-text-red">{{$ctrl.errortext}}</p>
             </div>
         </form>
 
         <div class="w3-container w3-border-top w3-padding-16 w3-light-grey our-div">
             <button onclick="document.getElementById('formDiv').style.display='none'" type="button" class="w3-button w3-red">Cancel</button>
-            <button class="w3-button our-button" style="margin-left: 10px;" ng-click="$ctrl.update()">Submit</button>
+            <button class="w3-button our-button" style="margin-left: 10px;" ng-click="$ctrl.update()" ng-disabled="taskForm.$invalid">Submit</button>
         </div>
     </div>
 </div>

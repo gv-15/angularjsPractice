@@ -17,8 +17,10 @@ function todoController($scope, $element, $attrs) {
         formData.state = "In Progress";  //default state
         ctrl.errortext = "";
         var exists = false;
-        for (let i = 0; i < ctrl.tasks.length; i++) {
-            if (ctrl.verifyTasks(formData, ctrl.tasks[i])) {
+        for (var i = 0; i < ctrl.tasks.length; i++) {
+            var clone = JSON.parse(JSON.stringify(ctrl.tasks[i]));
+            delete clone.$$hashKey;
+            if (ctrl.verifyTasks(formData, clone)) {
                 exists = true;
                 break;
             }
