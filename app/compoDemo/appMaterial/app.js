@@ -1,8 +1,7 @@
 'use strict';
 
-var movieApp = angular.module('myApp.movie', ['ngMaterial', 'ngMessages','ngroute']);
+var movieApp = angular.module('myApp.movie', ['ngMaterial', 'ngMessages', 'ngRoute']);
 
-        
 
 movieApp.config(['$routeProvider', function ($routeProvider) {
     $routeProvider.when('/compoDemo', {
@@ -11,5 +10,5 @@ movieApp.config(['$routeProvider', function ($routeProvider) {
     });
 }])
 
-        .controller('compoDemoCtrl', function($scope){
-        });
+    .controller('compoDemoCtrl', function ($scope) {
+    });

@@ -12,6 +12,6 @@ movieApp.component("movieComponent", {
         movie: '<',
         rating: '@'
     },
-    templateUrl: "component/component.html",
+    templateUrl: "compoDemo/appMaterial/component/component.html",
     controller: compoController
 });
