@@ -2,7 +2,10 @@
     "elements": {
         "div": {},
         "p": {},
-        "br": {}
+        "br": {},
+        "movie": {},
+        "movie-component": {},
+        "md-input-container": {}
     },
     "attributes": {
         "alling": {

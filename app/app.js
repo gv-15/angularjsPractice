@@ -11,6 +11,7 @@ var app = angular.module('myApp', [
     'myApp.sacristan.presentation',
     'myApp.contact',
     'myApp.todo',
+    'myApp.movie',
     'myApp.view1',
     'ngAnimate'   //load the dependencies
 ]).config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {

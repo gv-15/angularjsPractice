@@ -31,6 +31,6 @@ function movieController($scope, $mdDialog) {
 }
 
 movieApp.component("movie", {
-    templateUrl: "movie/movie.html",
+    templateUrl: "compoDemo/appMaterial/movie/movie.html",
     controller: movieController
 });
