@@ -1,4 +1,5 @@
 body {
+   
     font-family: Consolas;
     background-color: gainsboro;
     justify-content: center;
@@ -50,6 +51,7 @@ select:focus + .focus {
 }
 
 button {
+    
     font-family: Consolas;
     color: white;
     border: 1px solid var(--select-border);
